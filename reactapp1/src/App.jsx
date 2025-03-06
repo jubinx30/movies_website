@@ -9,8 +9,8 @@ const [hasLiked, sethasLiked] = useState(false);
   return(
     <div className ="card">   
     <h1> {title} </h1>
-    <button onClick = {() => sethasLiked(true)}>
-       Like 
+    <button onClick = {() => sethasLiked(!hasLiked)}>
+       {hasLiked ? '❤️' : '🤍'} 
        </button>
     </div>
   );
