@@ -1,0 +1,26 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  padding: 40px;
+  background-color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 48px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1024px;
+  margin: 0 auto;
+}
