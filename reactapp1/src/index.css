@@ -17,7 +17,7 @@
 
   --breakpoint-xs: 480px;
 
-  --background-image-hero-pattern: url("/hero-bg.png");
+  --background-image-hero-pattern: url("./hero-bg.png");
 }
 
 @layer base {
@@ -142,8 +142,15 @@
   }
 }
 
-@utility text-gradient {
-  @apply bg-linear-to-r from-[#D6C7FF] to-[#AB8BFF] bg-clip-text text-transparent;
+@utility text-gradient1 {
+  @apply bg-linear-to-r from-[#784dee] to-[#3eb0ea] bg-clip-text text-transparent;
+}
+
+@utility text-gradient2 {
+  @apply bg-linear-to-r from-[#6bc272] to-[#ffbb8b] bg-clip-text text-transparent;
+}
+@utility text-gradient3 {
+  @apply bg-linear-to-r from-[#ff4400] to-[#AB8BFF] bg-clip-text text-transparent;
 }
 
 @utility fancy-text {
@@ -160,3 +167,4 @@
     display: none;
   }
 }
+

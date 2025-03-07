@@ -1,30 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react'
+import Search  from './components/Search.jsx'
 
-const Card = ({ title }) => {
-const [hasLiked, sethasLiked] = useState(false); 
-
-  return(
-    <div className ="card">   
-    <h1> {title} </h1>
-    <button onClick = {() => sethasLiked(!hasLiked)}>
-       {hasLiked ? '❤️' : '🤍'} 
-       </button>
-    </div>
-  );
-}
-
-const App  = () => {
-  
+export const App = () => {
+  const [searchTerm, setSearchTerm] = useState('');
   return (
-    <div className='card-container'>
-      <Card title ="Star Wars"  />
-      <Card title ="Star Wars" />
-      <Card title ="Star Wars" />
+    <main>
+    
+      <div className="pattern" />
+      <div className= "wrapper"> 
+      <header>
+        <img src ='./hero.svg' alt = "hero_banner"/>
+       <h1><span className='text-gradient1'>Your</span><span className='text-gradient2'>Movie</span><span className='text-gradient3'>Universe.com</span></h1>
+      </header>
+      <Search searchTerm = {searchTerm} setSearchTerm = {setSearchTerm} />
+      <h1 className='text-white'> {searchTerm}</h1>
     </div>
-  );
+    </main>
+  )
 }
 
-export default App
+export default App;
